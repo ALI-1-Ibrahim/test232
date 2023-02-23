@@ -60,11 +60,7 @@ function Translate() {
 		//translate 
 		this.process =  function(){
 			_self = this;
-			let fetchRes =  fetch("../lng/"+this.lng+".json",{
-				method: 'GET',
-				headers: {
-				  accept: 'application/json',
-				}});
+			let fetchRes =  fetch("../lng/"+this.lng+".json");
 			fetchRes.then(res => res.json())
 			.then( function (d) {
 				var allDom = document.getElementsByTagName("*");
